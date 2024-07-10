@@ -90,12 +90,15 @@ public class Main {
                 case 3:
                     System.out.println("Enter the number you are searching for: ");
                     int lookup = scanner.nextInt();
-                    for(int n: menu){
-                        if(n == lookup){
-
-                            System.out.println((n==lookup)? lookup +" is an element of the array": lookup +" is not an element of the array");
+                    boolean isThere = false;
+                    for(int n: menu) {
+                        if (n == lookup) {
+                            isThere = true;
+                        }else {
+                            isThere = false;
                         }
                     }
+                    System.out.println(isThere? lookup + " is an element of the array": lookup+ " is not an element of the array");
                     break;
                 case 4:
                     Arrays.sort(menu);
